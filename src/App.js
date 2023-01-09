@@ -9,6 +9,12 @@ function App() {
   const onTankChange = (e) => {
     setTank(e.target.value);
   };
+  const onMpgChange = (e) => {
+    setMpg(e.target.value);
+  };
+  const onDistanceChange = (e) => {
+    setDistance(e.target.value);
+  };
   return (
     <div className="App">
       <fieldset>
@@ -18,6 +24,10 @@ function App() {
       <fieldset>
         <label htmlFor="mpg"> MPG </label>
         <input value={mpg} onChange={onMpgChange} name="mpg" type="number" />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="distance"> Distance </label>
+        <input value={distance} onChange={onDistanceChange} name="distance" type="number" />
       </fieldset>
     </div>
   );
