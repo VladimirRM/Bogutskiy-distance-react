@@ -16,7 +16,7 @@ function App() {
   const onDistanceChange = (e) => {
     setDistance(e.target.value);
   };
-  const onCalculate = () => {
+  const Calculate = () => {
     const carDistance = tank * mpg;
     if (carDistance >= distance) setResult("We finish");
     else setResult("We do not finish ");
@@ -40,7 +40,7 @@ function App() {
           type="number"
         />
       </fieldset>
-      <button onClick={onCalculate}>Calculate</button>
+
       <div>
         {tank}
         {mpg}
