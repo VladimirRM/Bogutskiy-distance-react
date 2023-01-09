@@ -29,6 +29,7 @@ function App() {
         <label htmlFor="distance"> Distance </label>
         <input value={distance} onChange={onDistanceChange} name="distance" type="number" />
       </fieldset>
+      <button>Calculate</button>
     </div>
   );
 }
