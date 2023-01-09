@@ -8,12 +8,12 @@ const [distance,setDistance]= useState(0)
 
 
 
-const onTankChange = ()=>{
-  
+const onTankChange = (e)=>{
+    setTank(e.target.value)
 }
   return (
     <div className="App">
-      <input value={tank} onChange={onTankChange} />
+      <input value={tank} onChange={onTankChange} name="tank" />
    
     </div>
   );
