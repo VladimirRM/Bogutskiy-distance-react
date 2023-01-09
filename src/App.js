@@ -9,15 +9,19 @@ function App() {
 
   const onTankChange = (e) => {
     setTank(e.target.value);
+    calculate();
   };
   const onMpgChange = (e) => {
     setMpg(e.target.value);
+    calculate();
   };
   const onDistanceChange = (e) => {
     setDistance(e.target.value);
+    calculate();
   };
-  const Calculate = () => {
+  const calculate = () => {
     const carDistance = tank * mpg;
+
     if (carDistance >= distance) setResult("We finish");
     else setResult("We do not finish ");
   };
