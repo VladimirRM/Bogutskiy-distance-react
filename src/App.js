@@ -1,20 +1,24 @@
-import React,{useState} from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
-const [tank,setTank]= useState(0)
-const [mpg,setMpg]= useState(0)
-const [distance,setDistance]= useState(0)
+  const [tank, setTank] = useState(0);
+  const [mpg, setMpg] = useState(0);
+  const [distance, setDistance] = useState(0);
 
-
-
-const onTankChange = (e)=>{
-    setTank(e.target.value)
-}
+  const onTankChange = (e) => {
+    setTank(e.target.value);
+  };
   return (
     <div className="App">
-      <input value={tank} onChange={onTankChange} name="tank" />
-   
+      <fieldset>
+        <label htmlFor="tank"> Tank, gal </label>
+        <input value={tank} onChange={onTankChange} name="tank" type="number" />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="tank"> Tank, gal </label>
+        <input value={tank} onChange={onTankChange} name="tank" type="number" />
+      </fieldset>
     </div>
   );
 }
