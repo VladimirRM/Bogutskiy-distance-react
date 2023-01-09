@@ -16,8 +16,8 @@ function App() {
         <input value={tank} onChange={onTankChange} name="tank" type="number" />
       </fieldset>
       <fieldset>
-        <label htmlFor="tank"> Tank, gal </label>
-        <input value={tank} onChange={onTankChange} name="tank" type="number" />
+        <label htmlFor="mpg"> MPG </label>
+        <input value={mpg} onChange={onMpgChange} name="mpg" type="number" />
       </fieldset>
     </div>
   );
