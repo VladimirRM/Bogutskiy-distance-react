@@ -5,6 +5,7 @@ function App() {
   const [tank, setTank] = useState(0);
   const [mpg, setMpg] = useState(0);
   const [distance, setDistance] = useState(0);
+  const [result, setResult] = useState(0);
 
   const onTankChange = (e) => {
     setTank(e.target.value);
@@ -15,6 +16,9 @@ function App() {
   const onDistanceChange = (e) => {
     setDistance(e.target.value);
   };
+  const onCalculate =()=>{
+    
+  }
   return (
     <div className="App">
       <fieldset>
@@ -29,7 +33,7 @@ function App() {
         <label htmlFor="distance"> Distance </label>
         <input value={distance} onChange={onDistanceChange} name="distance" type="number" />
       </fieldset>
-      <button>Calculate</button>
+      <button onClick={onCalculate}>Calculate</button>
     </div>
   );
 }
