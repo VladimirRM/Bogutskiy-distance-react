@@ -5,7 +5,7 @@ function App() {
   const [tank, setTank] = useState(0);
   const [mpg, setMpg] = useState(0);
   const [distance, setDistance] = useState(0);
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState("");
 
   const onTankChange = (e) => {
     setTank(e.target.value);
@@ -16,9 +16,11 @@ function App() {
   const onDistanceChange = (e) => {
     setDistance(e.target.value);
   };
-  const onCalculate =()=>{
-    
-  }
+  const onCalculate = () => {
+    const carDistance = tank * mpg;
+    if (carDistance >= distance) setResult("We finish");
+    else setResult("We do not finish ");
+  };
   return (
     <div className="App">
       <fieldset>
@@ -31,9 +33,22 @@ function App() {
       </fieldset>
       <fieldset>
         <label htmlFor="distance"> Distance </label>
-        <input value={distance} onChange={onDistanceChange} name="distance" type="number" />
+        <input
+          value={distance}
+          onChange={onDistanceChange}
+          name="distance"
+          type="number"
+        />
       </fieldset>
       <button onClick={onCalculate}>Calculate</button>
+      <div>
+        {tank}
+        {mpg}
+        {distance}
+      </div>
+
+      <hr />
+      {result}
     </div>
   );
 }
